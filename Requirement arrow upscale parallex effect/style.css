@@ -1,0 +1,51 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 200vh; /* Scrollable Content */
+    background: linear-gradient(to bottom, #ffffff, #87cefa);
+    overflow-x: hidden;
+  }
+  
+  /* Arrow Container Fixed in Middle */
+  .scroll-arrow-container {
+    position: fixed;
+    top: 50%; /* Center Vertically */
+    left: 50%; /* Center Horizontally */
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column-reverse; /* Ensures the line grows upward */
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Expanding Line */
+  .scroll-line {
+    position: absolute;
+    bottom: 0; /* Start at the arrow */
+    width: 3px; /* Match line width with arrow thickness */
+    height: 0; /* Start with Zero Height */
+    background-color: #333;
+    transform: translateX(-50%);
+    transition: height 0.1s ease-out;
+  }
+  
+  /* Scroll Arrow */
+  .scroll-arrow {
+    font-size: 3rem; /* Adjust arrow size */
+    color: #333;
+    line-height: 0.5; /* Match visual tail thickness with the line */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3px; /* Match line width */
+    height: 40px; /* Arrow tail length */
+    background-color: #333; /* Arrow tail matches the line */
+    transform: translateX(-50%);
+  }
+
+.intro{
+    position: fixed;
+    top: 50vh;
+}
